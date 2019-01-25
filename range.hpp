@@ -7,6 +7,14 @@
 #include <iostream>
 using namespace std;
 
+template <typename T>
+void print(list<T> v){
+    cout << "[ ";
+    for(auto i: v){
+        cout << i << ", ";
+    }
+    cout << "]" <<endl;
+}
 
 template <typename T>
 void print(vector<T> v){

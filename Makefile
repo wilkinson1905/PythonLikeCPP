@@ -9,6 +9,12 @@ all.h.gch : all.h
 run : program
 	./program
 
+100 : 100-A-PoisonousCookies.cpp all.h range.hpp all.h.gch
+	g++ $(gcc_options) -include all.h $< -o $@
+
+run100 : 100
+	./100 < input.txt
+
 clean :
 	rm -f ./program
 	rm -f ./all.h.gch
