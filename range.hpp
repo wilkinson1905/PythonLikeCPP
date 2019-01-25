@@ -36,6 +36,24 @@ auto range(int start, int end){
     iota(v.begin(), v.end(), start);
     return v;
 }
+
+auto range(int start, int end, int step){
+    vector<int> v;
+    if(step == 0){return v;}
+    if(step > 0 && start > end){return v;}
+    if(step < 0 && start < end ){return v;}
+    if(step > 0){
+        for(int i = start; i < end; i += step){
+            v.push_back(i);
+        }
+    }else{
+        for(int i = start; end < i; i += step){
+            v.push_back(i);
+        }
+    }
+    return v;
+}
+
 auto range(int num){
     vector<int> v(num);
     iota(v.begin(), v.end(), 0);

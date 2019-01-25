@@ -10,4 +10,9 @@ int main(){
         }
         print(v);
     }
+    print(range(0,100,2));
+    print(range(0,100,-1));
+    print(range(10,20,0));
+    print(range(9,0,-1));
+    print(range(10));
 }
